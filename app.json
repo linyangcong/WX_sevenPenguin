@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/components/about/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "sevenPenguin",
+    "navigationBarTextStyle": "black"
+  },
+    "tabBar": {
+      "borderStyle": "white",
+      "backgroundColor": "#0280ff",
+      "color": "#fff",
+      "selectedColor": "#f4ea2a",
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "text": "首页",
+          "iconPath": "pages/Assets/images/home.png",
+          "selectedIconPath": "pages/Assets/images/homeSelected.png"
+        },
+        {
+          "pagePath": "pages/components/about/index",
+          "text": "关于",
+          "iconPath": "pages/Assets/images/about.png",
+          "selectedIconPath": "pages/Assets/images/aboutSelected.png"
+        }
+      ]
+    },
+  "sitemapLocation": "sitemap.json"
+}

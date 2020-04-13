@@ -1,0 +1,30 @@
+/* pages/components/about/index.wxss */
+page{
+    height: 100%;
+}
+.content{
+  height: 100%;
+  background: #eee;
+  color: #333;
+  padding: 20px;
+}
+.Main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+.Main :first-child{
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+.ahout_author{
+  text-indent: 2rem
+}
+.goReport{
+  text-decoration: underline;
+  color: rgb(6, 159, 248);
+}

@@ -1,0 +1,19 @@
+<!--pages/components/about/index.wxml-->
+<view class='content'>
+  <view class='Main'>
+    <view>
+      <image src='../../Assets/images/author.png'></image>
+    </view>
+    <view>
+      <text>sevenPenguin</text>
+    </view>
+  </view>
+  <view class='ahout_author'>
+    <text>{{author.decorations}}</text>
+    <text class='goReport' bindtap='goReport'>{{author.eMail}}</text>
+  </view>
+  <view class='ahout_author'>
+    <text>{{author.produce}}</text>
+    <text class='goReport' bindtap='goReport'>{{author.eMail}}</text>
+  </view>
+</view>

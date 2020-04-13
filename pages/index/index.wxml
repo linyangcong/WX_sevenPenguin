@@ -1,0 +1,60 @@
+<!--index.wxml-->
+<view class='contain'>
+  <!-- 查询音乐 -->
+  <view class='search'>
+    <input class='searchInput' placeholder='查询音乐名'></input>
+    <button class='searchBtn'>查询</button>
+  </view>
+  <!-- 热播，流行，抖音最火 -->
+  <view class='block'>
+    <view>
+      <text class='title'>音乐模块</text>
+    </view>
+    <view class='module'>
+      <view class='moduleItem' wx:for="{{list0}}">
+        <view style=''>
+          <image src="{{item.url}}"></image>
+        </view>
+        <view>
+          <text>{{item.title}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 猜你喜欢 -->
+  <view class='block'>
+    <view>
+      <text class='title'>猜你喜欢</text>
+    </view>
+    <view class='guessLike'>
+      <view class='guessLikeItem' wx:for="{{list}}">
+        <view style=''>
+          <image src="{{item.url}}"></image>
+        </view>
+        <view>
+          <text>{{item.title}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 推荐音乐 -->
+  <view class='block'>
+    <view>
+      <text class='title'>音乐推荐</text>
+    </view>
+    <view class='musicProduce'>
+      <view class='musicProduceItem' wx:for="{{list1}}">
+        <view>
+          <image src="{{item.url}}"></image>
+        </view>
+        <view>
+          <text>{{item.title}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view id='showPlayControll' bindtap='showPlayControll' class='{{playControll}}'>
+    <text>播放器</text>
+  </view>
+</view>
