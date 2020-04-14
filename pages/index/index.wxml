@@ -5,13 +5,25 @@
     <input class='searchInput' placeholder='查询音乐名'></input>
     <button class='searchBtn'>查询</button>
   </view>
+  <view>
+  <view class='block crouse'>
+    <view wx:for="{{crouse}}" wx:key="unique"  wx:if="{{activeCrouse==item.index}}">
+      <image bindtap="goPersonView" data-item="{{item}}" src="{{item.img}}"></image>
+    </view>
+   
+  </view>
+   <view class="cText">
+      <text bindtap="changeTap"  class="{{crouseKey[item.index-1]}}" wx:for="{{crouse}}"  id="{{item.index}}">
+      </text>
+    </view>
+  </view>
   <!-- 热播，流行，抖音最火 -->
   <view class='block'>
     <view>
       <text class='title'>音乐模块</text>
     </view>
     <view class='module'>
-      <view class='moduleItem' wx:for="{{list0}}">
+      <view class='moduleItem' wx:for="{{list0}}" wx:key="unique">
         <view style=''>
           <image src="{{item.url}}"></image>
         </view>
@@ -27,7 +39,7 @@
       <text class='title'>猜你喜欢</text>
     </view>
     <view class='guessLike'>
-      <view class='guessLikeItem' wx:for="{{list}}">
+      <view class='guessLikeItem' wx:for="{{list}}" wx:key="unique">
         <view style=''>
           <image src="{{item.url}}"></image>
         </view>
@@ -40,16 +52,17 @@
   <!-- 推荐音乐 -->
   <view class='block'>
     <view>
-      <text class='title'>音乐推荐</text>
+      <text class='title'>今日推荐</text>
     </view>
     <view class='musicProduce'>
-      <view class='musicProduceItem' wx:for="{{list1}}">
+      <view class='musicProduceItem' wx:for="{{list1}}" wx:key="unique">
+        <view class="text">
+          <text>{{item.title}}</text>
+        </view>
         <view>
           <image src="{{item.url}}"></image>
         </view>
-        <view>
-          <text>{{item.title}}</text>
-        </view>
+        
       </view>
     </view>
   </view>

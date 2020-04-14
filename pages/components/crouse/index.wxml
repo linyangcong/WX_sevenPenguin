@@ -1,0 +1,6 @@
+<!--pages/components/crouse/index.wxml-->
+<!-- <text>pages/components/crouse/index.wxml</text> -->
+<view>
+<image src='{{img}}'></image>
+<text>uri:{{uri==''?'暂未填写地址':uri}}</text>
+</view>
