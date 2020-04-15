@@ -1,10 +1,11 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+var timer;
 Page({
   data: {
     activeCrouse:1,
+    // timer:'',
     crouseKey: ['crouseKeyActive', 'crouseKey', 'crouseKey'],
     crouse:[
       {index:1, uri: '', img:'http://47.115.124.190/WebView/discovery/走马灯/z1.jpg'},
@@ -12,15 +13,15 @@ Page({
       { index: 3, uri: '', img: 'http://47.115.124.190/WebView/discovery/走马灯/z3.jpg' },
     ],
     list0:[
-      { title: '每日推荐', url: 'http://47.115.124.190/WebView/User/u1.jpg' },
-      { title: '排行榜', url: 'http://47.115.124.190/WebView/User/u2.jpg' },
-      { title: '直播', url: 'http://47.115.124.190/WebView/User/u3.jpg' }
+      { title: '每日推荐', url: 'http://47.115.124.190/WebView/User/u1.jpg',uri:'mrtj' },
+      { title: '排行榜', url: 'http://47.115.124.190/WebView/User/u2.jpg', uri: 'phb' },
+      { title: '直播', url: 'http://47.115.124.190/WebView/User/u3.jpg', uri: 'zb' }
     ],
     list: [
-      { title: '新歌', url:'http://47.115.124.190/WebView/discovery/d1.jpg'},
-      { title: '抖音最火', url:'http://47.115.124.190/WebView/discovery/d2.jpg'},
-      { title: '经典音乐', url: 'http://47.115.124.190/WebView/discovery/d3.jpg'},
-      { title: '流行音乐', url: 'http://47.115.124.190/WebView/discovery/d4.jpg'}
+      { title: '新歌', url:'http://47.115.124.190/WebView/discovery/d2.jpg'},
+      { title: '抖音最火', url:'http://47.115.124.190/WebView/discovery/d4.jpg'},
+      { title: '经典音乐', url: 'http://47.115.124.190/WebView/discovery/d5.jpg'},
+      { title: '流行音乐', url: 'http://47.115.124.190/WebView/discovery/d6.jpg'}
     ],
     list1: [
       { title: '想麻雀一样脆弱而顽强的往前飞吧', url: 'http://47.115.124.190/WebView/Video/LOOK直播/v1.jpg' },
@@ -45,6 +46,7 @@ Page({
     }
    
   },
+
   //事件处理函数
   // bindViewTap: function() {
   //   wx.navigateTo({
@@ -53,7 +55,7 @@ Page({
   // },
   onLoad: function () {
     const crouseImg = wx.createSelectorQuery()
-  setInterval(()=>{
+  timer=setInterval(()=>{
     // console.log(this.data.activeCrouse)
     if(this.data.activeCrouse<3&&this.data.activeCrouse>=1){
       // crouseImg.select('#crouse'+this.data.activeCrouse).show
@@ -76,6 +78,10 @@ Page({
     }
     
   },5000)
+  },
+  onUnload:function(){
+    clearInterval(timer)
+    timer=null
   },
   changeTab: function () {
     switch (this.data.activeCrouse) {
@@ -100,6 +106,12 @@ Page({
       success:function(){
         console.log('success')
       }
+    })
+  },
+  goLists: function (e) {
+    console.log(e.currentTarget.dataset)
+    wx.navigateTo({
+      url: '../components/lists/index?id='+e.currentTarget.dataset.uri,
     })
   }
   // getUserInfo: function(e) {

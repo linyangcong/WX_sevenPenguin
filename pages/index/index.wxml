@@ -8,7 +8,7 @@
   <view>
   <view class='block crouse'>
     <view wx:for="{{crouse}}" wx:key="unique"  wx:if="{{activeCrouse==item.index}}">
-      <image bindtap="goPersonView" data-item="{{item}}" src="{{item.img}}"></image>
+      <image bindtap="goPersonView"  data-item="{{item}}" src="{{item.img}}"></image>
     </view>
    
   </view>
@@ -19,12 +19,12 @@
   </view>
   <!-- 热播，流行，抖音最火 -->
   <view class='block'>
-    <view>
+    <view class="Ttitle">
       <text class='title'>音乐模块</text>
     </view>
-    <view class='module'>
+    <view class='module common'>
       <view class='moduleItem' wx:for="{{list0}}" wx:key="unique">
-        <view style=''>
+        <view bindtap="goLists" data-uri="{{item.uri}}">
           <image src="{{item.url}}"></image>
         </view>
         <view>
@@ -35,10 +35,10 @@
   </view>
   <!-- 猜你喜欢 -->
   <view class='block'>
-    <view>
+    <view  class="Ttitle">
       <text class='title'>猜你喜欢</text>
     </view>
-    <view class='guessLike'>
+    <view class='guessLike common'>
       <view class='guessLikeItem' wx:for="{{list}}" wx:key="unique">
         <view style=''>
           <image src="{{item.url}}"></image>
@@ -51,10 +51,10 @@
   </view>
   <!-- 推荐音乐 -->
   <view class='block'>
-    <view>
+    <view  class="Ttitle">
       <text class='title'>今日推荐</text>
     </view>
-    <view class='musicProduce'>
+    <view class='musicProduce common'>
       <view class='musicProduceItem' wx:for="{{list1}}" wx:key="unique">
         <view class="text">
           <text>{{item.title}}</text>

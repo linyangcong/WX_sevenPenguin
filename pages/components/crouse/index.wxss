@@ -1,1 +1,9 @@
 /* pages/components/crouse/index.wxss */
+.page{
+  padding: 0px 10px;
+  overflow: hidden
+}
+.page image{
+  width: 100%;
+  height: 10rem
+}

@@ -2,19 +2,21 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/components/about/index"
+    "pages/components/about/index",
+    "pages/components/lists/index",
+    "pages/components/playControll/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#000",
     "navigationBarTitleText": "sevenPenguin",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "borderStyle": "white",
-    "backgroundColor": "#0280ff",
+    "backgroundColor": "#000",
     "color": "#fff",
-    "selectedColor": "#f4ea2a",
+    "selectedColor": "#aaa",
     "list": [
       {
         "pagePath": "pages/index/index",

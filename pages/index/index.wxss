@@ -1,21 +1,20 @@
 .contain{
-   padding: 10rpx 20rpx;
-   /* overflow: hidden */
+   padding: 0px 10px;
+   /* width: 100%; */
+   overflow: hidden
 }
 .block{
   margin:20px 0px;
   width: 100%;
-  overflow: hidden
+  overflow: hidden;
 }
 .crouse{
   display: flex;
   flex-direction: row;
 }
-.crouse :nth-child(n){
-  /* display: none */
-}
-.crouse image{
-  height: 10rem
+.crouse :first-child{
+  height: 10rem;
+  width:100%
 }
 .cText{
   z-index: 1000;
@@ -26,14 +25,14 @@
   margin: auto;
   justify-content: space-between;
   margin-top: -3rem;
-  margin-bottom: 2rem
+  margin-bottom: 2rem;
 }
 .crouseKey{
   height: 6px;
   width:20px;
   /* border-radius: 3px; */
-  background: #0c348afd;
-}
+  background: green;
+  }
 .crouseKeyActive{
   height: 6px;
   width:20px;
@@ -44,7 +43,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
- 
+  margin: 20px 0px;
 }
 .searchInput{
   flex: 8;
@@ -64,6 +63,13 @@
   font-size: 16px;
   color: #333
 }
+.Ttitle{
+  padding: 5px;
+  border-bottom: 1px solid #eee
+}
+.common{
+  margin-top: 10px;
+}
 .module{
   display: flex;
   flex-direction: row;
@@ -78,6 +84,10 @@
 .moduleItem image{
   width: 80px;
   height: 80px;
+}
+.moduleItem text{
+  font-size: 14px;
+  color: #333;
 }
 .guessLike{
   /* margin: auto;
@@ -105,17 +115,18 @@
   color: #888;
   margin: auto;
   text-align: left;
-  overflow: hidden
+  overflow: hidden;
 }
 .musicProduce image{
   height: 10rem;
-  width: 20rem;
+  width: 100%;
 }
 .musicProduce .musicProduceItem{
    display: inline-block;
+   width:100%;
   /* background: red; */
   /* border: 1px solid #888; */
-  margin:10px;
+  margin:10px 0px;
 }
 .musicProduceItem .text{
   font-size: 12px;

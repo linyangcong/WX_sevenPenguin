@@ -1,0 +1,9 @@
+<!--pages/components/playControll/index.wxml-->
+<view class="page">
+<view class="musicLyrics">
+<view class='itemlist'  wx:for='{{lyrics}}'>
+<text class="{{showTime==item.time?'showTime':'noShow'}}">{{item.time}}</text>
+<text>{{item.ly}}</text>
+</view>
+</view>
+</view>

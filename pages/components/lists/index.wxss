@@ -1,0 +1,72 @@
+/* pages/components/lists/index.wxss */
+.page{
+  /* padding: 0px 10px; */
+  overflow: hidden;
+  background: #eee
+}
+.mainPage{
+  margin: 20px 0px;
+  background: #FFF;
+  padding: 10px 16px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.TitleBar{
+  width: 100%;
+  color: #333;
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+.TitleBar :nth-child(2){
+margin-left: 6px
+}
+.TitleBar image{
+  width: 20px;
+  height: 20px
+}
+
+.ItemPage{
+  width: 100%;
+}
+.item{
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+.item :first-child{
+  flex: 1;
+  font-size: 16px;
+  color: #333
+}
+.item :nth-child(2){
+  flex:2
+}
+.item :last-child{
+  flex: 7;
+}
+.item image{
+  width: 50px;
+  height: 50px;
+}
+.ItemPageTitle{
+  margin-left: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.ItemPageTitle :first-child{
+  display: block;
+  font-size: 14px;
+  color: #333
+}
+.ItemPageTitle :last-child{
+  display: block;
+  font-size: 12px;
+  color: #333
+}
