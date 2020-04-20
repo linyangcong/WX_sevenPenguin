@@ -5,6 +5,7 @@
     "pages/components/about/index",
     "pages/components/lists/index",
     "pages/components/playControll/index"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

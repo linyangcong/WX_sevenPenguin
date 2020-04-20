@@ -1,9 +1,39 @@
 <!--pages/components/playControll/index.wxml-->
 <view class="page">
-<view class="musicLyrics">
-<view class='itemlist'  wx:for='{{lyrics}}'>
-<text class="{{showTime==item.time?'showTime':'noShow'}}">{{item.time}}</text>
-<text>{{item.ly}}</text>
-</view>
-</view>
+
+	<!-- 歌词 -->
+	<view wx:if="{{showPage}}" class="musicLyrics" bindtap="seeLyrics">
+		<view class='itemlist' wx:for='{{lyrics}}'>
+			<text class="{{showTime==item.time?'showTime':'noShow'}}">{{item.time}}</text>
+			<text>{{item.ly}}</text>
+		</view>
+	</view>
+
+	<!-- 旋转样式 -->
+	<view wx:if="{{!showPage}}" bindtap="seeLyrics">
+		<view class="imagePage">
+			<view class="title">
+				<view><text>BeaTsGOy - Piano Beat</text></view>
+				<view class="author"><text>linynagcong</text></view>
+			</view>
+			<image src='http://47.115.124.190/WebView/Imgs/1.jpg'></image>
+			<view class="title"><text>怀着冷却了的心窝漂远方</text></view>
+		</view>
+	</view>
+
+
+	<view class="controllTool">
+		<!-- 滑块 -->
+		<view class="musicSlider">
+			<text>{{currentTime}}</text>
+			<slider value="{{percentage}}"   />
+			<text>{{durations}}</text>
+		</view>
+		<!-- 播放按钮 -->
+		<view>
+			<button class="{{playState?'playing':'paused'}}" bindtap="changePlay">{{playState?'暂停':'播放'}}</button>
+		</view>
+	</view>
+
+
 </view>

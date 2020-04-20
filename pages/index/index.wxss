@@ -148,7 +148,7 @@
   background: rgb(2, 175, 255);
   border-top-left-radius:17px;
   border-bottom-left-radius: 17px; 
-  margin-right: -70px;
+  margin-right: -65px;
 }
 .playControll1{
   /* position: fixed;

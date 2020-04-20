@@ -5,7 +5,7 @@
   background: #eee
 }
 .mainPage{
-  margin: 20px 0px;
+  margin: 10px 0px;
   background: #FFF;
   padding: 10px 16px;
   border-top-right-radius: 20px;
